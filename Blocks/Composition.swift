@@ -43,11 +43,11 @@ class Composition: CustomStringConvertible {
         for block in blocks {
             switch type {
             case .name:
-                res += "\(block.getType(type: type)) "
+                res += "\(block.getField(type: type)) "
             case .pinyin:
                 fallthrough
             case .symbol:
-                res += "\(block.getType(type: type))"
+                res += "\(block.getField(type: type))"
             }
         }
         if (type == .pinyin) {

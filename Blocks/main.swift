@@ -8,6 +8,7 @@
 import Foundation
 
 class Main {
+
     init() {
         print("Only prints the components in Chinese (pinyin).")
         let fire = Block(name: "Feu", pinyin: "Huǒ", symbol: "火")
@@ -52,11 +53,12 @@ class Main {
         print(belgianKingdom)
     }
     
+    /// This function executes some tests on `Block` and `Composition` objects.
     func test() {
         let fire = Block(name: "Feu", pinyin: "Huǒ", symbol: "火")
-        assert(fire.getType(type: .name) == "Feu", "The name should be 'Feu' and not '\(fire.getType(type: .name))'.")
-        assert(fire.getType(type: .pinyin) == "Huǒ", "The value should be 'Huǒ' and not '\(fire.getType(type: .pinyin))'.")
-        assert(fire.getType(type: .symbol) == "火", "The value should be '火' and not '\(fire.getType(type: .symbol))'.")
+        assert(fire.getField(type: .name) == "Feu", "The name should be 'Feu' and not '\(fire.getField(type: .name))'.")
+        assert(fire.getField(type: .pinyin) == "Huǒ", "The value should be 'Huǒ' and not '\(fire.getField(type: .pinyin))'.")
+        assert(fire.getField(type: .symbol) == "火", "The value should be '火' and not '\(fire.getField(type: .symbol))'.")
         
         let mountain = Block(name: "Montagne", pinyin: "Shān", symbol: "山")
         let volcano = Composition(name: "Volcan", blocks: [fire, mountain])
