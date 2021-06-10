@@ -8,7 +8,7 @@
 import Foundation
 
 enum Types {
-	case name
-	case pinyin
-	case symbol
+    case name
+    case pinyin
+    case symbol
 }
