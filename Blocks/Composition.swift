@@ -11,6 +11,10 @@ class Composition: CustomStringConvertible {
     var name: String
     var blocks: [Block]
     
+    /// Initialize the `Composition` object with a name and a list of `Block` objects.
+    /// - Parameters:
+    ///   - name: The name of the Chinese composition
+    ///   - blocks: The list of the blocks
     init(name: String, blocks: [Block] = []) {
         self.name = name
         self.blocks = blocks
